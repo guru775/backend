@@ -26,6 +26,10 @@ route.get("/getPost", async (req, res) => {
   res.status(200).json(data);
 });
 
+route.get("/getDetails", async(req, res) => {
+   res.status(200).send("hello world!");
+})
+
 route.post("/createPost", async (req, res) => {
   try {
     const img = req.files.PostImage.tempFilePath;
